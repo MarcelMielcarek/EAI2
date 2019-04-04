@@ -4,6 +4,9 @@ namespace Boxes {
 	let x: number = 0;
 	let y: number = 0;
 
+	document.addEventListener("DOMContentLoaded", start);
+
+	function start(): void {
 	for (let i: number = 0; i < n; i++) {
 		y += (i == 2) ? 20 : 50;
 		x = (x + 170) % 400;
@@ -44,4 +47,5 @@ namespace Boxes {
 		s.left = _x + "px";
 		s.top = _y + "px";
 	}
+}
 }
