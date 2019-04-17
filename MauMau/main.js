@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
     document.getElementById("kartenSortieren").addEventListener("click", sortieren);
     document.getElementById("stapel").addEventListener("click", addieren);
+    document.getElementById("hand").addEventListener("click", karteAblegen);
+    document.addEventListener("keydown", spacebar);
     console.log("los");
     // Nutzereingabe Kartenanzahl
     let eingabe = parseInt(prompt("Wie viele Karten?", "4-9"));
@@ -27,75 +29,80 @@ function verteilen(_eingabe) {
     for (let i = 0; i < _eingabe; i++) {
         let index = Math.floor(Math.random() * cards.length);
         let card = cards[index];
-        hand.push(card);
         cards.splice(index, 1);
+        hand.push(card);
     }
     console.table(hand);
 }
 function addieren() {
-    let i = 1;
+    // let i: number = 1;
     let index = Math.floor(Math.random() * cards.length);
     let card = cards[index];
     hand.push(card);
     cards.splice(index, 1);
-    console.log("123");
     let cardx = document.createElement("div");
-    cardx.innerText = hand[i].color + " " + hand[i].value;
+    cardx.innerText = hand[hand.length - 1].color + " " + hand[hand.length - 1].value;
     cardx.setAttribute("class", "cards");
-    cardx.setAttribute("id", "card" + i + hand.length);
+    cardx.setAttribute("id", "" + hand[hand.length - 1].id);
     // Karte dem DOM Tree hinzufügen
     document.getElementById("hand").appendChild(cardx);
+    console.log(index);
 }
 function anzeigen() {
-    console.log("yay");
+    document.getElementById("hand").innerHTML = "";
     for (let i = 0; i < hand.length; i++) {
         // Karte erstellen
         let card = document.createElement("div");
         card.innerText = hand[i].color + " " + hand[i].value;
         card.setAttribute("class", "cards");
-        card.setAttribute("id", "card" + i);
+        card.setAttribute("id", "" + hand[i].id);
         // Karte dem DOM Tree hinzufügen
         document.getElementById("hand").appendChild(card);
     }
 }
+function anzeigenSpielfeld() {
+    console.log("yay");
+    document.getElementById("spielfeld").innerHTML = "";
+    let i = 0;
+    // Karte erstellen
+    let card = document.createElement("div");
+    card.innerText = spielfeld[i].color + " " + spielfeld[i].value;
+    card.setAttribute("class", "cards");
+    card.setAttribute("id", "" + spielfeld[i].id);
+    // Karte dem DOM Tree hinzufügen
+    document.getElementById("spielfeld").appendChild(card);
+    spielfeld.splice(i, 1);
+}
 function sortieren() {
-    console.log("tadaaaa");
-    let sortHand = [];
-    for (let i = 0; i <= hand.length; i++) {
-        let card = cards[i];
-        let cardPosition = hand[i].position;
-        sortHand.push(cardPosition);
-        console.log(sortHand);
+    hand.sort(compareFunction);
+    anzeigen();
+}
+function compareFunction(a, b) {
+    if (a.position < b.position)
+        return -1;
+    if (a.position > b.position)
+        return 1;
+    return 0;
+}
+function spacebar(_event) {
+    if (_event.code == "Space") {
+        _event.preventDefault();
+        addieren();
     }
-    // sortHand.sort();
-    console.log("irgendwas");
 }
 function karteAblegen(_event) {
+    console.log("es tut");
     let domCard = _event.target;
-    console.log(domCard);
     for (let i = 0; i < hand.length; i++) {
+        console.log(hand[i].id + domCard.id);
+        console.log(domCard);
         if (hand[i].id == Number(domCard.id)) {
-            console.log(hand[i].id);
+            console.log("spaß" + spielfeld + " " + hand);
             spielfeld.push(hand[i]);
             hand.splice(i, 1);
+            anzeigenSpielfeld();
             anzeigen();
         }
     }
 }
-/*  let cardPosition: number = hand[i].position;
-let card: Card = cards[i];
-let posControl: number = 1;
-
-for (let n: number = 0; n < 32; n++) {
-console.log ("hier hast du deine Position" + cardPosition);
-if (cardPosition == posControl) {
-   hand.push(card);
-    console.log (cardPosition + "...bliblablups" + posControl);
-}
-else {
-    console.log ("mach nichts");
-}
-n++;
-posControl++; */
-// console.log ("irgendwas");
 //# sourceMappingURL=main.js.map

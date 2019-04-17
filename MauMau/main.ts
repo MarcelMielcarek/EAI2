@@ -21,6 +21,8 @@ document.addEventListener("DOMContentLoaded", init);
 function init(): void {
     document.getElementById("kartenSortieren").addEventListener("click", sortieren);
     document.getElementById("stapel").addEventListener("click", addieren);
+    document.getElementById("hand").addEventListener("click", karteAblegen);
+    document.addEventListener("keydown", spacebar);
     
     console.log ("los");
     // Nutzereingabe Kartenanzahl
@@ -43,91 +45,93 @@ function verteilen(_eingabe: number): void {
     for (let i: number = 0; i < _eingabe; i++) {
         let index: number = Math.floor(Math.random() * cards.length);
         let card: Card = cards[index];
-        hand.push(card);
         cards.splice(index, 1);
+        hand.push(card);
     }
     
     console.table(hand);
 }
 function addieren(): void {
-        let i: number = 1;
-        let index: number = Math.floor(Math.random() * cards.length);
-        let card: Card = cards[index];
-        hand.push(card);
-        cards.splice(index, 1);
-    
-        console.log("123");
-        let cardx: HTMLElement = document.createElement("div");
-        cardx.innerText = hand[i].color + " " + hand[i].value;
-        cardx.setAttribute("class", "cards");
-        cardx.setAttribute("id", "card" + i + hand.length);
-        // Karte dem DOM Tree hinzufügen
-        document.getElementById("hand").appendChild(cardx);
+    // let i: number = 1;
+    let index: number = Math.floor(Math.random() * cards.length);
+    let card: Card = cards[index];
+    hand.push(card);
+    cards.splice(index, 1);
+
+    let cardx: HTMLElement = document.createElement("div");
+    cardx.innerText = hand[hand.length - 1].color + " " + hand[hand.length - 1].value;
+    cardx.setAttribute("class", "cards");
+    cardx.setAttribute("id", "" + hand[hand.length - 1].id);
+    // Karte dem DOM Tree hinzufügen
+    document.getElementById("hand").appendChild(cardx);
+    console.log(index);
 }
+
 function anzeigen(): void {
-    console.log ("yay");
+    document.getElementById("hand").innerHTML = "";
     for (let i: number = 0; i < hand.length; i++) {
         // Karte erstellen
         let card: HTMLElement = document.createElement("div");
         card.innerText = hand[i].color + " " + hand[i].value;
         card.setAttribute("class", "cards");
-        card.setAttribute("id", "card" + i);
+        card.setAttribute("id", "" + hand[i].id);
         // Karte dem DOM Tree hinzufügen
         document.getElementById("hand").appendChild(card);
     }
 }
 
+function anzeigenSpielfeld(): void {
+    console.log ("yay");
+    document.getElementById("spielfeld").innerHTML = "";
+    let i: number = 0; 
+        // Karte erstellen
+    let card: HTMLElement = document.createElement("div");
+    card.innerText = spielfeld[i].color + " " + spielfeld[i].value;
+    card.setAttribute("class", "cards");
+    card.setAttribute("id", "" + spielfeld[i].id);
+        // Karte dem DOM Tree hinzufügen
+    document.getElementById("spielfeld").appendChild(card);
+    spielfeld.splice(i, 1);
+    
+}
+
 function sortieren(): void {
-    console.log ("tadaaaa");
-    let sortHand: string[] = [];
-    for (let i: number = 0; i <= hand.length; i++) {
+    hand.sort(compareFunction);
+    anzeigen();
+}
+function compareFunction(a: Card, b: Card): number {
+    if (a.position < b.position)
+        return -1;
+    
+    if (a.position > b.position)
+        return 1;
 
-        let card: Card = cards[i];
-        let cardPosition: string = hand[i].position; 
-        
-        sortHand.push(cardPosition);
-        console.log (sortHand);
+    return 0;
+} 
 
-        }
-
-
-    // sortHand.sort();
-    console.log ("irgendwas");
+function spacebar(_event: KeyboardEvent): void {
+    if (_event.code == "Space") {
+        _event.preventDefault();
+        addieren();
     }
+}
 
 function karteAblegen(_event: Event): void {
-            let domCard: HTMLElement = <HTMLElement>_event.target;
-            console.log(domCard);
-            for (let i: number = 0; i < hand.length; i++) {
-            if (hand[i].id == Number(domCard.id)) {
-                console.log (hand[i].id);
-                spielfeld.push(hand[i]);
-                hand.splice(i, 1);
-                anzeigen();
-            }
-            
+    console.log("es tut");
+    let domCard: HTMLElement = <HTMLElement>_event.target;
+    
+    for (let i: number = 0; i < hand.length; i++) {
+    console.log(hand[i].id + domCard.id);
+    console.log(domCard);
+    if (hand[i].id == Number(domCard.id)) {
+    console.log ("spaß" + spielfeld + " " + hand);
+    
+    spielfeld.push(hand[i]);
+    hand.splice(i, 1);
+    anzeigenSpielfeld();
+    anzeigen();
+}
+        
         }
         
     }
-
-
-
-
-
-
-            /*  let cardPosition: number = hand[i].position; 
-        let card: Card = cards[i];
-        let posControl: number = 1;
-
-        for (let n: number = 0; n < 32; n++) {
-            console.log ("hier hast du deine Position" + cardPosition);
-            if (cardPosition == posControl) {
-               hand.push(card);
-                console.log (cardPosition + "...bliblablups" + posControl);
-            }
-            else {
-                console.log ("mach nichts");
-            }
-            n++;
-            posControl++; */
-        // console.log ("irgendwas");
