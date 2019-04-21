@@ -2,87 +2,103 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>L04_FormElements</title>
-<link rel="stylesheet" href="FormElements.css" type="text/css" media="screen"/>
-<script src="FormElements.js" type="text/javascript" charset="utf-8"></script>
+<title>Eis</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+<script src="main.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 
-	<fieldset id="radio">
-		<legend> Radiobutton Group </legend>
-		<input type="radio" name="Radiogroup" value="radio1" id="radio1" />
-		<label for="radio1">Radio Button 1</label>
-		<input type="radio" name="Radiogroup" value="radio2" id="radio2"/>
-		<label for="radio2">Radio Button 2</label>
-		<input type="radio" name="Radiogroup2" value="radio3" id="radio3"/>
-		<label for="radio3">Radio Button 3</label>
-		<input type="radio" name="Radiogroup2" value="radio4" id="radio4"/>
-		<label for="radio4">Radio Button 4</label>
+	<fieldset id="Behälter">
+		<legend> Behälter </legend>
+		<input type="radio" name="behälter" value="Becher" id="Becher" />
+		<label for="radio1">Becher</label>
+		<input type="radio" name="behälter" value="Waffel" id="Waffel"/>
+		<label for="radio2">Waffel</label>
 	</fieldset>
-<!-- -->
-	<fieldset id="checkbox">
-		<legend> Checkbox Group </legend>
-		<input type="checkbox" name="Checkbox1" value="check1" id="check1"/>
-		<label for="check1">Checkbox 1</label>
-		<input type="checkbox" name="Checkbox2" value="check2" id="check2"/>
-		<label for="check2">Checkbox 2</label>
-		<input type="checkbox" name="Checkbox3" value="check3" id="check3"/>
-		<label for="check3">Checkbox 3</label>
+
+	<fieldset id="eissorten">
+
+		<legend>Eissorten: 1.20€ die Kugel</legend>
+
+		<input type="checkbox" name="Eissorte1" value="Schokolade" id="Eis1" />
+		<label for="Eis1">Schokolade</label>
+		<input type="checkbox" name="Eissorte2" value="Vanille" id="Eis2" />
+		<label for="Eis2">Vanille</label>
+		<input type="checkbox" name="Eissorte3" value="Banane" id="Eis3" />
+		<label for="Eis3">Banane</label>
+		<input type="checkbox" name="Eissorte4" value="Mocca" id="Eis4" />
+		<label for="Eis4">Mocca</label>
+		<input type="checkbox" name="Eissorte5" value="Erdbeer" id="Eis5" />
+		<label for="Eis5">Erdbeer</label>
+		<input type="checkbox" name="Eissorte6" value="Zitrone" id="Eis6" />
+		<label for="Eis6">Zitrone</label>
+		<input type="checkbox" name="Eissorte7" value="Nuss" id="Eis7" />
+		<label for="Eis7">Nuss</label>
+		<input type="checkbox" name="Eissorte8" value="Melone" id="Eis8" />
+		<label for="Eis8">Melone</label>
+		<input type="checkbox" name="Eissorte9" value="Aprikose" id="Eis9" />
+		<label for="Eis9">Aprikose</label>
+
 	</fieldset>
-<!-- -->
-	<fieldset id="select">
-		<legend> Selection &amp; Interaction </legend>
-		Slider
-		<input type="range" name="Slider" min="0" max="1" step="0.1" value="0"/>
+
+	<fieldset id="topping">
+		<legend>Topping: 0.50€ pro Topping</legend>
+		<input type="checkbox" name="Checkbox1" value="Krokant" id="check1"/>
+		<label for="check1">Krokant</label>
+		<input type="checkbox" name="Checkbox2" value="Schokostreusel" id="check2"/>
+		<label for="check3">Schokostreusel</label>
+		<input type="checkbox" name="Checkbox3" value="Sahne" id="check3"/>
+		<label for="check4">Sahne</label>
+		<input type="checkbox" name="Checkbox4" value="Marmelade" id="check4"/>
+		<label for="check5">Marmelade</label>
+		<input type="checkbox" name="Checkbox5" value="Schokosoße" id="check5"/>
+		<label for="check6">Schokosoße</label>
+	</fieldset>
+
+	<fieldset id="fix">
+		<div id="bestellung">
+			<legend>Ihre Bestellung</legend>
+		</div>
+
+		<div id="behaelter"></div>
+		<div id="lieferung"></div>
+		<div id="rechnung"></div>
+
+	</fieldset>
+
+	<fieldset id="Kontakt">
+		<legend> Lieferadresse und Zahlungsmethode </legend>
+		Name
+		<input type="text" name="name" placeholder="Vorname, Name" id= "a" required/>
+		Adresse
+		<input type="text" name="adresse" placeholder="Straße, Nummer" id= "b" required/>
+		PLZ
+		<input type="text" name="PLZ" pattern="[0-9]{5}" placeholder="78120" id= "c" required/>
+		Mail
+		<input type="email" name="Mail" placeholder="lecker@eis.de" id= "d"/>
 		<hr/>
-		Stepper
-		<input type="number" name="Stepper" step="0.1" min="-1" max="1" value="0"/>
-		<hr/>
-		Datalist
-		<input type="text" name="Datalist" list="options" placeholder="what to buy?"/>
-		<datalist id="options">
-			<option value="Butter"> </option>
-			<option value="Milk"> </option>
-			<option value="Flour"> </option>
-			<option value="Sugar"> </option>
-			<option value="Eggs"> </option>
-			<option value="Salt"> </option>
-			<option value="Bread"> </option>
-		</datalist>
-		<hr/>
-		Select Box
-		<select name="Select" id="select">
-			<optgroup label="OptGroup1">
-				<option value="option1">First Option</option>
-				<option value="option2" selected>Second Option</option>
-			</optgroup>
-			<optgroup label="OptGroup2"></optgroup>
-			<option value="option3">Third Option</option>
-			<option value="option4">Fourth Option</option>
+		Zahlung
+		<select name="Zahlen" id="select">
+				<option value="option1">Paypal</option>
+				<option value="option2">Kreditkarte</option>
+				<option value="option3">Bar</option>
 		</select>
 		<hr/>
-		Button
-		<button name="Button" type="submit">Click me!</button>
-    </fieldset>
-    <fieldset id="text">
-		<legend> Text-Input </legend>
-		Simple
-		<input type="text" name="Text" placeholder="type here" required/>
-		<hr/>
-		Password
-		<input type="password" name="Password" placeholder="type password here"/>
-		<hr/>
-		Pattern
-		<input type="text" name="Pattern" pattern="[7-9]{3}" placeholder="use RegEx"/>
-		<hr/>
-		Mail
-		<input type="email" name="Mail" placeholder="place @ between"/>
-		<hr/>
-		Url
-		<input type="url" name="Url" placeholder="start with http:"/>
-		<hr/>
-		Area
-		<textarea name="Area" cols="30" rows="3" placeholder="long text here"></textarea>
-	</fieldset>
+		<textarea name="Area" cols="30" rows="3" placeholder="Sonstiges"></textarea>
+		<fieldset id="lieferoption">
+
+            <legend>Lieferoptionen</legend>
+
+            <input type="radio" name="liefern" value="Standardlieferung" id="ja" />
+            <label for="ja">Standardlieferung +2€</label>
+            <input type="radio" name="liefern" value="Selbstabholer" id="nein" />
+            <label for="nein">Selbsabholer</label>
+
+        </fieldset>
+				<hr/>
+				<button id="check">Jetzt bestellen!</button>
+				<div id="pruefeEinfuegen"></div>
+				</fieldset>
+
 </body>
 </html>

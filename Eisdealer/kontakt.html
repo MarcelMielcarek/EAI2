@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Eis</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+<script src="main.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+            <fieldset id="Kontakt">
+                <legend> Lieferadresse und Zahlungsmethode </legend>
+                Name
+                <input type="text" name="name" placeholder="Vorname, Name" required/>
+                PLZ
+                <input type="text" name="PLZ" pattern="[7-9]{3}" placeholder="78120" required/>
+                Straße
+                <input type="text" name="str" placeholder="Straße, Nummer" required/>
+                Mail
+                <input type="email" name="Mail" placeholder="lecker@eis.de"/>
+                <hr/>
+                Zahlung
+                <select name="Zahlen" id="select">
+                        <option value="option1">Paypal</option>
+                        <option value="option2">Kreditkarte</option>
+                        <option value="option3">Bar</option>
+                </select>
+                Lieferung
+                <select name="lieferung" id="select">
+                        <option value="option1">Selbstabholer</option>
+                        <option value="option2">Standardliefrung</option>
+                        <option value="option3">Expresslieferung</option>
+                </select>
+                <hr/>
+                <textarea name="Area" cols="30" rows="3" placeholder="Sonstiges"></textarea>
+                        <hr/>
+                <button name="Button" type="submit"><a href="eis.html">Zurück</a></button>
+                <button name="buttonBestellen" type="submit">Jetzt bestellen!</button>
+
+            
+        </body>
+        </html>

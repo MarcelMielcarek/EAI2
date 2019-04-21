@@ -1,14 +1,21 @@
 
 * {
 	display: block;
+	font-family: Arial, Helvetica, sans-serif;
 }
+
+body {
+	background-color: #fab1a0;
+}
+
 input[type="radio"], input[type="checkbox"], label {
-	display: inline;
+	display: inline-block;
 }
 label::after {
 	content:"";
 	display: block;
 }
+
 head {
 	display: none;
 }
@@ -21,11 +28,23 @@ input:valid {
 input:required {
 	background: #aaaaaa;
 }
+
 fieldset {
-	width: 300px;
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	background-color: #55efc4;
+	border-color: white;
 }
+
+fieldset 
+
 svg, figure, button, option {
-	display: inline;
+	display: inline-block;
 	margin: 0px;
 	padding: 0px;
+}
+
+#fix {
+    max-width: 300px;
 }
