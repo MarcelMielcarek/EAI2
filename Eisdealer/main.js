@@ -1,9 +1,9 @@
-var EisEisBaby;
-(function (EisEisBaby) {
+var Eisdieledealer;
+(function (Eisdieledealer) {
     window.addEventListener("load", init);
     function init(_event) {
         let fieldsets = document.getElementsByTagName("fieldset");
-        document.getElementById("check").addEventListener("click", pruefeAusgefuellt);
+        document.getElementById("check").addEventListener("click", checkVolstaendig);
         for (let i = 0; i < fieldsets.length; i++) {
             let fieldset = fieldsets[i];
             fieldset.addEventListener("change", handleChange);
@@ -99,10 +99,10 @@ var EisEisBaby;
             <p id="${target.id}">Preis: ${PREISEIS + PREISTOPPING + LIEFERKOSTEN} €</p>`;
         prodElement.innerHTML = ergebnis;
     }
-    function pruefeAusgefuellt() {
-        let name = document.getElementById("a");
-        let adresse = document.getElementById("b");
-        let PLZ = document.getElementById("c");
+    function checkVolstaendig() {
+        let name = document.getElementById("name");
+        let adresse = document.getElementById("adresse");
+        let PLZ = document.getElementById("PLZ");
         let pruefen;
         if (name.value == "" || adresse.value == "" || PLZ.value == "") {
             document.getElementById("pruefeEinfuegen").innerHTML = "";
@@ -115,5 +115,5 @@ var EisEisBaby;
             pruefen.innerHTML += "Ihr Eis ist auf dem Weg!";
         }
     }
-})(EisEisBaby || (EisEisBaby = {}));
+})(Eisdieledealer || (Eisdieledealer = {}));
 //# sourceMappingURL=main.js.map

@@ -1,10 +1,10 @@
-namespace EisEisBaby {
+namespace Eisdieledealer {
 
     window.addEventListener("load", init);
     function init(_event: Event): void {
         
         let fieldsets: HTMLCollectionOf<HTMLFieldSetElement> = document.getElementsByTagName("fieldset");
-        document.getElementById("check").addEventListener("click", pruefeAusgefuellt);
+        document.getElementById("check").addEventListener("click", checkVolstaendig);
 
         for (let i: number = 0; i < fieldsets.length; i++) {
             let fieldset: HTMLFieldSetElement = fieldsets[i];
@@ -121,11 +121,11 @@ namespace EisEisBaby {
         prodElement.innerHTML = ergebnis;
     }
 
-    function pruefeAusgefuellt(): void {
+    function checkVolstaendig(): void {
 
-        let name: HTMLInputElement = <HTMLInputElement>document.getElementById("a");
-        let adresse: HTMLInputElement = <HTMLInputElement>document.getElementById("b");
-        let PLZ: HTMLInputElement = <HTMLInputElement>document.getElementById("c");
+        let name: HTMLInputElement = <HTMLInputElement>document.getElementById("name");
+        let adresse: HTMLInputElement = <HTMLInputElement>document.getElementById("adresse");
+        let PLZ: HTMLInputElement = <HTMLInputElement>document.getElementById("PLZ");
 
         let pruefen: HTMLElement;
 
