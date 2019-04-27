@@ -81,7 +81,7 @@ namespace Eisdieledealer {
             console.log(eis.length * 1.2);
         }
 
-        if (currentEventtarget.id == "topping" && target.checked) {
+        if (currentEventtarget.id == "toppings" && target.checked) {
             topping.push(target.value);
             console.log(topping.length * 0.5);
         }

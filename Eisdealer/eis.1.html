@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Eis</title>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"/>
+<script src="eissorte.js" type="text/javascript" charset="utf-8"></script>
+<script src="main.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+
+	<section id="dynContent">
+		<fieldset id="darreichung">
+			<legend>Darreichungsform</legend>
+		</fieldset>
+		<fieldset id="eissorten">
+			<legend>Eissorten</legend>
+		</fieldset>
+		<fieldset id="toppings">
+			<legend>Toppings</legend>
+		</fieldset>
+	</section>
+
+	<fieldset id="fix">
+		<div id="bestellung">
+			<legend>Ihre Bestellung</legend>
+		</div>
+
+		<div id="behaelter"></div>
+		<div id="lieferung"></div>
+		<div id="rechnung"></div>
+
+	</fieldset>
+
+	<fieldset id="Kontakt">
+		<legend> Lieferadresse und Zahlungsmethode </legend>
+		Name
+		<input type="text" name="name" placeholder="Vorname, Name" id= "name" required/>
+		Adresse
+		<input type="text" name="adresse" placeholder="Straße, Nummer" id= "adresse" required/>
+		PLZ
+		<input type="text" name="PLZ" pattern="[0-9]{5}" placeholder="78120" id= "PLZ" required/>
+		Mail
+		<input type="email" name="Mail" placeholder="lecker@eis.de" id= "d"/>
+		<hr/>
+		Zahlung
+		<select name="Zahlen" id="select">
+				<option value="option1">Paypal</option>
+				<option value="option2">Kreditkarte</option>
+				<option value="option3">Bar</option>
+		</select>
+		<hr/>
+		<textarea name="Area" cols="30" rows="3" placeholder="Sonstiges"></textarea>
+		<fieldset id="lieferoption">
+
+            <legend>Lieferoptionen</legend>
+
+            <input type="radio" name="liefern" value="Standardlieferung" id="ja" />
+            <label for="ja">Standardlieferung +2€</label>
+            <input type="radio" name="liefern" value="Selbstabholer" id="nein" />
+            <label for="nein">Selbsabholer</label>
+
+        </fieldset>
+				<hr/>
+				<button id="check">Jetzt bestellen!</button>
+				<div id="pruefeEinfuegen"></div>
+				</fieldset>
+
+</body>
+</html>
