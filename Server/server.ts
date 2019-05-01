@@ -1,4 +1,4 @@
-import * as Http from "http"; //Es wird ein Http Objekt erstellt
+import * as Http from "http"; //Es wird ein Http Objekt erstellt.
 
 namespace L05_Server { //namespace kriegt den Namen "L05_Server"
 	console.log("Starting server"); //Konsolenausgabe "Starting server"
