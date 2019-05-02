@@ -1,0 +1,157 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'g--',
+1 verbose cli   '@types/node' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.4
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData g--
+8 silly fetchPackageMetaData @types/node
+9 silly fetchNamedPackageData g--
+10 silly mapToRegistry name g--
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'g--',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'g--',
+13 silly mapToRegistry   name: 'g--',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/g--
+15 silly fetchNamedPackageData @types/node
+16 silly mapToRegistry name @types/node
+17 silly mapToRegistry scope (from package name) @types
+18 verbose mapToRegistry no registry URL found in name for scope @types
+19 silly mapToRegistry using default registry
+20 silly mapToRegistry registry https://registry.npmjs.org/
+21 silly mapToRegistry data Result {
+21 silly mapToRegistry   raw: '@types/node',
+21 silly mapToRegistry   scope: '@types',
+21 silly mapToRegistry   escapedName: '@types%2fnode',
+21 silly mapToRegistry   name: '@types/node',
+21 silly mapToRegistry   rawSpec: '',
+21 silly mapToRegistry   spec: 'latest',
+21 silly mapToRegistry   type: 'tag' }
+22 silly mapToRegistry uri https://registry.npmjs.org/@types%2fnode
+23 verbose request uri https://registry.npmjs.org/g--
+24 verbose request no auth needed
+25 info attempt registry request try #1 at 11:56:54
+26 verbose request id 7ca29cf115bde116
+27 http request GET https://registry.npmjs.org/g--
+28 verbose request uri https://registry.npmjs.org/@types%2fnode
+29 verbose request no auth needed
+30 info attempt registry request try #1 at 11:56:54
+31 verbose etag W/"060f02ec3dfa63d6a1b7f17ca25a6d6e"
+32 verbose lastModified Mon, 29 Apr 2019 23:50:13 GMT
+33 http request GET https://registry.npmjs.org/@types%2fnode
+34 http 304 https://registry.npmjs.org/@types%2fnode
+35 verbose headers { date: 'Thu, 02 May 2019 09:56:50 GMT',
+35 verbose headers   connection: 'keep-alive',
+35 verbose headers   'set-cookie': [ '__cfduid=d6d1f88cbe1abca668d068023ab4e8fb71556791010; expires=Fri, 01-May-20 09:56:50 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+35 verbose headers   'cf-cache-status': 'HIT',
+35 verbose headers   'cache-control': 'public, max-age=300',
+35 verbose headers   'cf-ray': '4d0920a98e8fbec4-FRA',
+35 verbose headers   etag: '"060f02ec3dfa63d6a1b7f17ca25a6d6e"',
+35 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+35 verbose headers   'last-modified': 'Mon, 29 Apr 2019 23:50:13 GMT',
+35 verbose headers   vary: 'Accept-Encoding',
+35 verbose headers   'x-amz-meta-rev': '3253-13903f2687cb78570de34bcc8218fc31',
+35 verbose headers   server: 'cloudflare' }
+36 silly get cb [ 304,
+36 silly get   { date: 'Thu, 02 May 2019 09:56:50 GMT',
+36 silly get     connection: 'keep-alive',
+36 silly get     'set-cookie': [ '__cfduid=d6d1f88cbe1abca668d068023ab4e8fb71556791010; expires=Fri, 01-May-20 09:56:50 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+36 silly get     'cf-cache-status': 'HIT',
+36 silly get     'cache-control': 'public, max-age=300',
+36 silly get     'cf-ray': '4d0920a98e8fbec4-FRA',
+36 silly get     etag: '"060f02ec3dfa63d6a1b7f17ca25a6d6e"',
+36 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+36 silly get     'last-modified': 'Mon, 29 Apr 2019 23:50:13 GMT',
+36 silly get     vary: 'Accept-Encoding',
+36 silly get     'x-amz-meta-rev': '3253-13903f2687cb78570de34bcc8218fc31',
+36 silly get     server: 'cloudflare' } ]
+37 verbose etag https://registry.npmjs.org/@types%2fnode from cache
+38 verbose get saving @types/node to C:\Users\NB-Admin\AppData\Roaming\npm-cache\registry.npmjs.org\_40types_252fnode\.cache.json
+39 verbose correctMkdir C:\Users\NB-Admin\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+40 http 404 https://registry.npmjs.org/g--
+41 verbose headers { date: 'Thu, 02 May 2019 09:56:51 GMT',
+41 verbose headers   'content-type': 'application/json',
+41 verbose headers   'content-length': '21',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'set-cookie': [ '__cfduid=d30c0f236c07f8fdf5217d79d0bb450301556791010; expires=Fri, 01-May-20 09:56:50 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+41 verbose headers   'cf-cache-status': 'MISS',
+41 verbose headers   'cache-control': 'max-age=300',
+41 verbose headers   'cf-ray': '4d0920a94a629724-FRA',
+41 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+41 verbose headers   vary: 'accept-encoding, accept',
+41 verbose headers   server: 'cloudflare' }
+42 silly get cb [ 404,
+42 silly get   { date: 'Thu, 02 May 2019 09:56:51 GMT',
+42 silly get     'content-type': 'application/json',
+42 silly get     'content-length': '21',
+42 silly get     connection: 'keep-alive',
+42 silly get     'set-cookie': [ '__cfduid=d30c0f236c07f8fdf5217d79d0bb450301556791010; expires=Fri, 01-May-20 09:56:50 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+42 silly get     'cf-cache-status': 'MISS',
+42 silly get     'cache-control': 'max-age=300',
+42 silly get     'cf-ray': '4d0920a94a629724-FRA',
+42 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+42 silly get     vary: 'accept-encoding, accept',
+42 silly get     server: 'cloudflare' } ]
+43 silly fetchPackageMetaData Error: Not found : g--
+43 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+43 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+43 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+43 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+43 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+43 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+43 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+43 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+43 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+43 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+43 silly fetchPackageMetaData  error for g-- { Error: Not found : g--
+43 silly fetchPackageMetaData     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+43 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+43 silly fetchPackageMetaData     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+43 silly fetchPackageMetaData     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+43 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+43 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+43 silly fetchPackageMetaData     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+43 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+43 silly fetchPackageMetaData     at Request.emit (events.js:188:7)
+43 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12) pkgid: 'g--', statusCode: 404, code: 'E404' }
+44 silly rollbackFailedOptional Starting
+45 silly rollbackFailedOptional Finishing
+46 silly runTopLevelLifecycles Finishing
+47 silly install printInstalled
+48 verbose stack Error: Not found : g--
+48 verbose stack     at makeError (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:302:12)
+48 verbose stack     at CachingRegistryClient.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:290:14)
+48 verbose stack     at Request._callback (C:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:210:14)
+48 verbose stack     at Request.self.callback (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:187:22)
+48 verbose stack     at emitTwo (events.js:106:13)
+48 verbose stack     at Request.emit (events.js:191:7)
+48 verbose stack     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1048:10)
+48 verbose stack     at emitOne (events.js:96:13)
+48 verbose stack     at Request.emit (events.js:188:7)
+48 verbose stack     at IncomingMessage.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:969:12)
+49 verbose statusCode 404
+50 verbose pkgid g--
+51 verbose cwd C:\Users\NB-Admin\Desktop\EAI2
+52 error Windows_NT 6.1.7601
+53 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "g--" "@types/node"
+54 error node v6.11.4
+55 error npm  v3.10.10
+56 error code E404
+57 error 404 Not found : g--
+58 error 404
+59 error 404 'g--' is not in the npm registry.
+60 error 404 You should bug the author to publish it (or use the name yourself!)
+61 error 404 Note that you can also install from a
+62 error 404 tarball, folder, http url, or git url.
+63 verbose exit [ 1, true ]

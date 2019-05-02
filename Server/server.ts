@@ -16,7 +16,7 @@ namespace L05_Server { //namespace kriegt den Namen "L05_Server"
 	}
 
 	function handleRequest(_request: Http.IncomingMessage, _response: Http.ServerResponse): void { //function handleRequest wird erstellt. Übergabeparameter werden deklariert. Die Funktion bekommt durch die Variable _request die eingegangen Anfrage mit und durch die Variable _response die Serverantwort.
-		console.log("I hear voices!"); //Konsolenausgabe "I hear voices!"
+		console.log(_request.url); //Konsolenausgabe "I hear voices!"
 
 		_response.setHeader("content-type", "text/html; charset=utf-8"); // Formatierung der Serverantwort. 
 		_response.setHeader("Access-Control-Allow-Origin", "*"); // "Access-Control-Allow-Origin" gibt an von welchen Quellen der Server Anfragen empfangen darf. Der Stern bedeutet, es gibt keine Einschränkungen, jede Quelle hat die Erlaubnis.
