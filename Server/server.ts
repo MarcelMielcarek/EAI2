@@ -1,4 +1,5 @@
 import * as Http from "http"; //Es wird ein Http Objekt erstellt.
+import * as Url from "url";
 
 namespace L05_Server { //namespace kriegt den Namen "L05_Server"
 	console.log("Starting server"); //Konsolenausgabe "Starting server"
@@ -20,6 +21,10 @@ namespace L05_Server { //namespace kriegt den Namen "L05_Server"
 
 		_response.setHeader("content-type", "text/html; charset=utf-8"); // Formatierung der Serverantwort. 
 		_response.setHeader("Access-Control-Allow-Origin", "*"); // "Access-Control-Allow-Origin" gibt an von welchen Quellen der Server Anfragen empfangen darf. Der Stern bedeutet, es gibt keine Einschränkungen, jede Quelle hat die Erlaubnis.
+
+		let url: Url.UrlWithParsedQuery = Url.parse(_request.url, true);
+		for (let key in url.query)
+			_response.write(key + ":" + url.query[key] + "<br/>");
 
 		_response.write(_request.url); // gibt eingegangene URL aus.
 

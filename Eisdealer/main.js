@@ -1,6 +1,7 @@
 var Eisdieledealer;
 (function (Eisdieledealer) {
     window.addEventListener("load", init);
+    let address = "http://localhost:8100";
     function init(_event) {
         let fieldsets = document.getElementsByTagName("fieldset");
         document.getElementById("check").addEventListener("click", checkVolstaendig);
@@ -113,6 +114,19 @@ var Eisdieledealer;
             document.getElementById("pruefeEinfuegen").innerHTML = "";
             pruefen = document.getElementById("pruefeEinfuegen");
             pruefen.innerHTML += "Ihr Eis ist auf dem Weg!";
+        }
+    }
+    function sendRequestWithCustomData(_inhalt) {
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", address + "?inhalt=" + _inhalt, true);
+        xhr.addEventListener("readystatechange", handleStateChange);
+        xhr.send();
+    }
+    function handleStateChange(_event) {
+        let xhr = _event.target;
+        if (xhr.readyState == XMLHttpRequest.DONE) {
+            console.log("ready: " + xhr.readyState, " | type: " + xhr.responseType, " | status:" + xhr.status, " | text:" + xhr.statusText);
+            console.log("response: " + xhr.response);
         }
     }
 })(Eisdieledealer || (Eisdieledealer = {}));
