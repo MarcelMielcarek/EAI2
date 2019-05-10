@@ -25,12 +25,10 @@ var L04_AssocArraysAndExport;
         if (xhr.readyState == XMLHttpRequest.DONE) {
             console.log("ready: " + xhr.readyState, " | type: " + xhr.responseType, " | status:" + xhr.status, " | text:" + xhr.statusText);
             console.log("response: " + xhr.response);
-            let order = document.createElement("p");
-            let heading = document.createElement("h2");
-            heading.innerHTML = "Deine Bestellung:";
-            document.getElementById("Bestellung").appendChild(heading);
-            order.innerHTML = `${xhr.response}`;
-            document.getElementById("Bestellung").appendChild(order);
+            //let order: HTMLParagraphElement = document.createElement("p");
+            let bestellungDiv = document.createElement("div");
+            bestellungDiv.innerHTML = "Deine Bestellung:" + `${xhr.response}`;
+            document.getElementById("Bestellung").appendChild(bestellungDiv);
         }
     }
 })(L04_AssocArraysAndExport || (L04_AssocArraysAndExport = {}));
