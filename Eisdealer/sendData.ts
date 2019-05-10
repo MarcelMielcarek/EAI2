@@ -5,7 +5,7 @@ namespace MarcelderHund {
     
     function clickButton(_event: Event): void {
             let button: HTMLButtonElement = <HTMLButtonElement>document.getElementById("check");
-            button.addEventListener("click", sendRequest);
+           // button.addEventListener("click", sendRequest);
         }
     
     export  function sendRequest(): void {
