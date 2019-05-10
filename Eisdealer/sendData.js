@@ -28,9 +28,9 @@ var L04_AssocArraysAndExport;
             let order = document.createElement("p");
             let heading = document.createElement("h2");
             heading.innerHTML = "Deine Bestellung:";
-            document.getElementById("serverBestellung").appendChild(heading);
+            document.getElementById("Bestellung").appendChild(heading);
             order.innerHTML = `${xhr.response}`;
-            document.getElementById("serverBestellung").appendChild(order);
+            document.getElementById("Bestellung").appendChild(order);
         }
     }
 })(L04_AssocArraysAndExport || (L04_AssocArraysAndExport = {}));
