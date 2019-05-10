@@ -138,8 +138,7 @@ namespace MarcelderHund {
             }
             
             else {
-               // function sendRequest(_event: Event);
-            }
+                 sendRequest();
         } 
         
     
@@ -147,4 +146,4 @@ namespace MarcelderHund {
 
 
 
-}
+}}

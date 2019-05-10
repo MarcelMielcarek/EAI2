@@ -7,7 +7,7 @@ var MarcelderHund;
         let button = document.getElementById("check");
         button.addEventListener("click", sendRequest);
     }
-    function sendRequest(_event) {
+    function sendRequest() {
         let input = document.getElementsByTagName("input");
         let getString = "?";
         for (let i = 0; i < input.length; i++) {

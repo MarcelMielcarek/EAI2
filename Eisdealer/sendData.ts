@@ -8,7 +8,7 @@ namespace MarcelderHund {
             button.addEventListener("click", sendRequest);
         }
     
-    export  function sendRequest(_event: Event): void {
+    export  function sendRequest(): void {
             let input: HTMLCollectionOf<HTMLInputElement> = document.getElementsByTagName("input");
             let getString: string = "?";
             for (let i: number = 0; i < input.length; i++) {

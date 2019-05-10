@@ -111,7 +111,7 @@ var MarcelderHund;
             pruefen.innerHTML += "Bitte füllen sie die fehlenden Daten aus";
         }
         else {
-            // function sendRequest(_event: Event);
+            MarcelderHund.sendRequest();
         }
     }
 })(MarcelderHund || (MarcelderHund = {}));
