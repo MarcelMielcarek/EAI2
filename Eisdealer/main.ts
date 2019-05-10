@@ -1,4 +1,4 @@
-namespace Eisdieledealer {
+namespace MarcelderHund {
 
     window.addEventListener("load", init);
     let address: string = "http://localhost:8100";
@@ -138,9 +138,7 @@ namespace Eisdieledealer {
             }
             
             else {
-                document.getElementById("pruefeEinfuegen").innerHTML = "";
-                pruefen = document.getElementById("pruefeEinfuegen");
-                pruefen.innerHTML += "Ihr Eis ist auf dem Weg!";
+               // function sendRequest(_event: Event);
             }
         } 
         

@@ -17,22 +17,6 @@ label::after {
 }
 
 
-
-#Bestellung{
-    background-color: rgb(244, 184, 250);
-    left: 30%;
-    right: 30%;
-    top: 30%;
-    z-index: 5;
-    position: absolute;
-
-}
-
-
-
-
-
-
 head {
 	display: none;
 }

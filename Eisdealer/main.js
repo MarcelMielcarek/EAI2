@@ -1,5 +1,5 @@
-var Eisdieledealer;
-(function (Eisdieledealer) {
+var MarcelderHund;
+(function (MarcelderHund) {
     window.addEventListener("load", init);
     let address = "http://localhost:8100";
     function init(_event) {
@@ -111,10 +111,8 @@ var Eisdieledealer;
             pruefen.innerHTML += "Bitte füllen sie die fehlenden Daten aus";
         }
         else {
-            document.getElementById("pruefeEinfuegen").innerHTML = "";
-            pruefen = document.getElementById("pruefeEinfuegen");
-            pruefen.innerHTML += "Ihr Eis ist auf dem Weg!";
+            // function sendRequest(_event: Event);
         }
     }
-})(Eisdieledealer || (Eisdieledealer = {}));
+})(MarcelderHund || (MarcelderHund = {}));
 //# sourceMappingURL=main.js.map

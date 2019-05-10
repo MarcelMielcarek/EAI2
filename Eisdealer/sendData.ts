@@ -1,4 +1,4 @@
-namespace L04_AssocArraysAndExport {
+namespace MarcelderHund {
     window.addEventListener("load", clickButton);
     let address: string = "https://eia3.herokuapp.com";
         //let address:string = "http://localhost:8100";
@@ -8,7 +8,7 @@ namespace L04_AssocArraysAndExport {
             button.addEventListener("click", sendRequest);
         }
     
-    function sendRequest(_event: Event): void {
+    export  function sendRequest(_event: Event): void {
             let input: HTMLCollectionOf<HTMLInputElement> = document.getElementsByTagName("input");
             let getString: string = "?";
             for (let i: number = 0; i < input.length; i++) {

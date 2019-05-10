@@ -1,5 +1,5 @@
-var L04_AssocArraysAndExport;
-(function (L04_AssocArraysAndExport) {
+var MarcelderHund;
+(function (MarcelderHund) {
     window.addEventListener("load", clickButton);
     let address = "https://eia3.herokuapp.com";
     //let address:string = "http://localhost:8100";
@@ -20,6 +20,7 @@ var L04_AssocArraysAndExport;
         xhr.addEventListener("readystatechange", handleStateChange);
         xhr.send();
     }
+    MarcelderHund.sendRequest = sendRequest;
     function handleStateChange(_event) {
         let xhr = _event.target;
         if (xhr.readyState == XMLHttpRequest.DONE) {
@@ -31,5 +32,5 @@ var L04_AssocArraysAndExport;
             document.getElementById("Bestellung").appendChild(bestellungDiv);
         }
     }
-})(L04_AssocArraysAndExport || (L04_AssocArraysAndExport = {}));
+})(MarcelderHund || (MarcelderHund = {}));
 //# sourceMappingURL=sendData.js.map

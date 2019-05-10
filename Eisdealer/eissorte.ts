@@ -1,4 +1,4 @@
-namespace AssocEisSorten {
+namespace MarcelderHund {
 	// Heterogenes assoziatives Array mit vordefinierten Schlüsseln
 	export interface Zutat {
 		name: string;
