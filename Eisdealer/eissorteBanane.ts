@@ -1,32 +1,45 @@
-namespace AssocEisSorten {
+namespace AssocEisSorten2 {
 	// Heterogenes assoziatives Array mit vordefinierten Schlüsseln
 	export interface Zutat {
 		name: string;
 		value: number;
 		truth: boolean;
-		inhalt: string[];
     }
-    
+
     // Homogenes assoziatives Array mit variablen Schlüsseln, 
 	// ein String wird abgebildet auf ein Array mit Objekten von obigen Typ 
 	export interface Angebot {
-        [key: string]: Zutat;
+        [key: string]: Zutats[];
         
 	}
 
 
 
 	// Beispieldaten auf Basis der oben angegebenen Strukturen
-	export let data: Angebot = {
-		"eis": {
-			name: "Eissorten", value: 2, truth: true, inhalt: ["Nuss", "Banane", "Melone", "Schokolade", "Vanille", "Mocca", "Zitrone", "Erdbeere" ]
-        },
-        "behaelter": {
-            name: "Behälter", value: 1, truth: true, inhalt: ["Waffel", "Becher", "Auf die Hand"]
-        },
-        "topping": {
-            name: "Toppings", value: 3, truth: false, inhalt: ["Schokostreusel", "Walnüsse", "Sahne", "Marmelade", "Maultaschen", "Krokant"] 
-        }
+	export let data2: Angebot = {
+		"eis": [
+            {name: "Nuss", value: 1.2, truth: true},
+            {name: "Banane", value: 1.2, truth: true},
+            {name: "Melone", value: 1.2, truth: true},
+            {name: "Schokolade", value: 1.2, truth: true},
+            {name: "Vanille", value: 1.2, truth: true},
+            {name: "Mocca", value: 1.2, truth: true},
+            {name: "Zitrone", value: 1.2, truth: true},
+            {name: "Erdbeere", value: 1.2, truth: true}
+        ],
+        "behaelter": [
+            {name: "Waffel", value: 0, truth: true},
+            {name: "Becher", value: 0, truth: true},
+            {name: "Auf die Hand", value: 0, truth: true}
+        ],
+        "topping": [
+            {name: "Schokostreusel", value: 3, truth: false},
+            {name: "Walnüsse", value: 3, truth: false},
+            {name: "Sahne", value: 3, truth: false},
+            {name: "Marmelade", value: 3, truth: false},
+            {name: "Maultaschen", value: 3, truth: false},
+            {name: "Krokant", value: 3, truth: false}
+        ]
     };
 
  let darreichung: HTMLElement;
@@ -45,6 +58,11 @@ namespace AssocEisSorten {
     topping();
 
  }
+
+function behaelter2 (): void {
+
+    
+}
 
  function behaelter (): void {
      for (let i: number = 0; i < data["behaelter"].inhalt.length; i++) {      

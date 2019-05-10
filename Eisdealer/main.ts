@@ -144,20 +144,7 @@ namespace Eisdieledealer {
             }
         } 
         
-    function sendRequestWithCustomData(_inhalt: string): void {
-            let xhr: XMLHttpRequest = new XMLHttpRequest();
-            xhr.open("GET", address + "?inhalt=" + _inhalt, true);
-            xhr.addEventListener("readystatechange", handleStateChange);
-            xhr.send();
-        }
-
-    function handleStateChange(_event: ProgressEvent): void {
-            let xhr: XMLHttpRequest = <XMLHttpRequest>_event.target;
-            if (xhr.readyState == XMLHttpRequest.DONE) {
-                console.log("ready: " + xhr.readyState, " | type: " + xhr.responseType, " | status:" + xhr.status, " | text:" + xhr.statusText);
-                console.log("response: " + xhr.response);
-            }
-        }
+    
 
 
 
