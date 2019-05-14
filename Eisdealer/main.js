@@ -18,9 +18,9 @@ var MarcelderHund;
     function bestellen(_event) {
         let target = _event.target;
         if (target.type == "checkbox" && target.checked) {
-            document.getElementById("bestellung").innerHTML = "";
+            document.getElementById("BestellungServer").innerHTML = "";
             let prodElement = document.createElement("div");
-            document.getElementById("bestellung").appendChild(prodElement);
+            document.getElementById("BestellungServer").appendChild(prodElement);
             bestellung.push(target.value);
             let wahl = `
             <p id="${target.id}">${bestellung}</p>`;
@@ -45,10 +45,10 @@ var MarcelderHund;
         if (target.type == "checkbox" && target.checked == false) {
             for (let u = 0; u < bestellung.length; u++) {
                 if (bestellung[u] == target.value) {
-                    document.getElementById("bestellung").innerHTML = "";
+                    document.getElementById("BestellungServer").innerHTML = "";
                     bestellung.splice(u, 1);
                     let prodElement = document.createElement("div");
-                    document.getElementById("bestellung").appendChild(prodElement);
+                    document.getElementById("BestellungServer").appendChild(prodElement);
                     let gewählt = `
                     <p id="${target.id}">${bestellung}</p>`;
                     prodElement.innerHTML = gewählt;

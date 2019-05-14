@@ -26,9 +26,9 @@ namespace MarcelderHund {
         
         if (target.type == "checkbox" && target.checked) {
 
-            document.getElementById("bestellung").innerHTML = "";
+            document.getElementById("BestellungServer").innerHTML = "";
             let prodElement: HTMLDivElement = document.createElement("div");
-            document.getElementById("bestellung").appendChild(prodElement);
+            document.getElementById("BestellungServer").appendChild(prodElement);
             bestellung.push(target.value);
             let wahl: string = `
             <p id="${target.id}">${bestellung}</p>`;
@@ -57,10 +57,10 @@ namespace MarcelderHund {
 
             for (let u: number = 0; u < bestellung.length; u++) {
                 if (bestellung[u] == target.value) {
-                    document.getElementById("bestellung").innerHTML = "";
+                    document.getElementById("BestellungServer").innerHTML = "";
                     bestellung.splice(u, 1);
                     let prodElement: HTMLDivElement = document.createElement("div");
-                    document.getElementById("bestellung").appendChild(prodElement);
+                    document.getElementById("BestellungServer").appendChild(prodElement);
                     let gewählt: string = `
                     <p id="${target.id}">${bestellung}</p>`;
                     prodElement.innerHTML = gewählt;

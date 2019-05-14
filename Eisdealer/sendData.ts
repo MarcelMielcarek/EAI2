@@ -30,7 +30,7 @@ namespace MarcelderHund {
                 //let order: HTMLParagraphElement = document.createElement("p");
                 let bestellungDiv: HTMLDivElement = document.createElement("div");
                 bestellungDiv.innerHTML = "Deine Bestellung:" + `${xhr.response}`;
-                document.getElementById("Bestellung").appendChild(bestellungDiv);
+                document.getElementById("BestellungServer").appendChild(bestellungDiv);
                 
             }       
         }

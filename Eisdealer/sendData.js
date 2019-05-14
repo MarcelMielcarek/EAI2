@@ -5,7 +5,7 @@ var MarcelderHund;
     //let address:string = "http://localhost:8100";
     function clickButton(_event) {
         let button = document.getElementById("check");
-        button.addEventListener("click", sendRequest);
+        // button.addEventListener("click", sendRequest);
     }
     function sendRequest() {
         let input = document.getElementsByTagName("input");
@@ -29,7 +29,7 @@ var MarcelderHund;
             //let order: HTMLParagraphElement = document.createElement("p");
             let bestellungDiv = document.createElement("div");
             bestellungDiv.innerHTML = "Deine Bestellung:" + `${xhr.response}`;
-            document.getElementById("Bestellung").appendChild(bestellungDiv);
+            document.getElementById("BestellungServer").appendChild(bestellungDiv);
         }
     }
 })(MarcelderHund || (MarcelderHund = {}));
